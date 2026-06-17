@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Smart Bookmark Manager</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="popup-body">
+  <header class="popup-header">
+    <div>
+      <h1>🔖 Bookmarks</h1>
+      <p id="stats">Loading...</p>
+    </div>
+    <button id="openDashboard" class="icon-button" title="Open dashboard">↗</button>
+  </header>
+
+  <div class="toolbar">
+    <input id="searchInput" type="search" placeholder="Search title, URL, domain..." />
+    <button id="saveCurrentTab" class="primary">+ Save tab</button>
+  </div>
+
+  <div class="filters">
+    <button class="chip active" data-filter="all">All</button>
+    <button class="chip" data-filter="Coding">Coding</button>
+    <button class="chip" data-filter="Job">Job</button>
+    <button class="chip" data-filter="Housing">Housing</button>
+    <button class="chip" data-filter="Docs">Docs</button>
+    <button class="chip" data-filter="Shopping">Shopping</button>
+  </div>
+
+  <main id="bookmarkGroups" class="bookmark-groups"></main>
+
+  <div id="popupStatus" class="popup-status"></div>
+
+  <footer class="popup-footer">
+    <button id="autoOrganize" class="primary">Auto organize</button>
+    <button id="findDuplicates">Duplicates</button>
+    <button id="refreshBtn">Refresh</button>
+  </footer>
+
+  <script src="utils.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>

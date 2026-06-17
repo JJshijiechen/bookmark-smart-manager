@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Smart Bookmark Dashboard</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="dashboard-body">
+  <aside class="sidebar">
+    <h1>🔖 Smart Bookmark Manager</h1>
+    <p>Search, categorize, and clean bookmarks locally. No API required.</p>
+
+    <div class="panel">
+      <h2>Actions</h2>
+      <button id="autoOrganize" class="primary full">Auto organize into folders</button>
+      <div id="actionStatus" class="action-status">Auto organize is safe: it copies bookmarks, does not move/delete originals.</div>
+      <button id="reCategorize" class="full">Re-categorize locally</button>
+      <button id="selectDuplicates" class="full">Select duplicate URLs</button>
+      <button id="deleteSelected" class="danger full">Delete selected</button>
+    </div>
+
+    <div class="panel">
+      <h2>View</h2>
+      <label><input type="radio" name="groupBy" value="category" checked /> Category</label>
+      <label><input type="radio" name="groupBy" value="domain" /> Domain</label>
+    </div>
+
+    <div class="panel small-text">
+      <h2>Categories</h2>
+      <p>Coding, Job, Housing, Finance, Shopping, Docs, School, Entertainment, Travel, Other</p>
+    </div>
+  </aside>
+
+  <main class="dashboard-main">
+    <div class="dashboard-toolbar">
+      <input id="dashboardSearch" type="search" placeholder="Search bookmarks..." />
+      <span id="dashboardStats"></span>
+    </div>
+    <section id="dashboardList" class="dashboard-list"></section>
+  </main>
+
+  <script src="utils.js"></script>
+  <script src="dashboard.js"></script>
+</body>
+</html>
